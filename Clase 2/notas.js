@@ -12,7 +12,7 @@ if (nota >= 0 && nota <= 100) {
     } else if (nota >= 60) {
         console.log(" Suficiente ");
     } else {
-        console.log(" No apruebado ");
+        console.log(" No aprobado ");
     }
 
 } else {
