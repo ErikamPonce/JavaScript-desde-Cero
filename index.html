@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Índice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>JavaScript desde 0</h1>
+    <p>Clases:</p>
+
+    <div class="buttons">
+      <button onclick="location.href='Clase1/tipos-de-datos.html'">Introducción a JavaScript</button>
+      <button onclick="location.href='Clase2/comparaciones-y-decisiones.html'">Comparaciones y decisiones en JavaScript</button>
+      <button onclick="location.href='Clase3/arreglos-y-ciclos.html'">Arreglos y ciclos en JavaScript</button>
+      
+    </div>
+  </div>
+
+</body>
+</html>
+
+<style> 
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #f105ba, #ff8afb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  background: rgba(15, 184, 206, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ffffff;
+  color: #2a5298;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #ce0878;
+  color: #000;
+  transform: translateY(-2px);
+}
+</style>
