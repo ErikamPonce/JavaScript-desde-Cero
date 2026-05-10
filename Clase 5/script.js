@@ -73,3 +73,85 @@ libro1.agregarCapitulo("Capítulo 2");
 agregarLibro(libro1);
 agregarLibro(libro2);
 mostrarLibros();
+
+
+
+//Apuntes de clase 
+//propiedades: caracteristicas de algo 
+//objeto: molde de un objeto, es una plantilla para crear objetos individuales con las mismas propiedades y métodos.
+//POO
+
+const persona = {
+    nombre: "Juan",
+    edad: 30, 
+    nacionalidad: "Mexicana",
+    altura: 1.70,
+    sexo: "Masculino",  
+    direccion: {
+        calle: "Calle Falsa",
+        numero: 123,
+        ciudad: "Ciudad de México",
+        pais: "México"
+    },
+    materias: ["Matemáticas", "Ciencias", "Historia"],
+
+    saludar() {
+        console.log(`Hola`);
+    }
+}
+persona.saludar();
+console.log(persona.direccion.ciudad);
+console.log(persona.materias[1]);
+
+
+//constructura
+function persona (nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+
+    this.saludar = function() {
+        console.log(`Hola, soy` + this.nombre + ` y tengo ` + this.edad + ` años.`);
+    }
+}
+
+let persona1 = new persona("Amé", 15);
+console.log(persona1.nombre);
+
+//añadiendo atributos 
+persona.email= 'juan@example.com'
+console.log(persona);
+
+
+let frutas = ["Manzana", "Platano", "Naranja"];
+for (const fruta of frutas){
+    console.log(fruta);
+}
+
+for (const propuedad in persona) {
+    console.log(propuedad);
+}
+
+//funciones anonimas
+const saludar = function() {
+    console.log("Holiss");
+}
+
+//funcion arrow
+const suma =(x, y)=> {
+    return x + y;
+}
+console.log(suma(5, 3));
+//funciones flecha
+const sumar = (a, b) => a + b;
+
+const alumno = {
+    nombre: "Ana",
+    edad: 20,   
+    status: "reprobado",
+}
+
+const json=JSON.stringify(alumno);
+console.log(json);
+
+const objeto = JSON.parse(json);
+console.log(objeto);
