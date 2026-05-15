@@ -1,0 +1,17 @@
+body {
+  font-family: Arial;
+  margin: 20px;
+  background-color: black;
+  color: white;
+}
+
+.comentario {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 5px;
+}
