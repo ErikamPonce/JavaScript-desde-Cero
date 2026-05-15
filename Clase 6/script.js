@@ -48,7 +48,22 @@
 
 
 
+    // function modooscuro(){
+    //     document.body.style.backgroundColor = "black";
+    //     document.body.style.color = "white";
+    //  } 
 
+    function modooscuro() {
+    document.body.classList.toggle("oscuro");
+
+    let boton = document.getElementById("btnModo");
+
+    if (document.body.classList.contains("oscuro")) {
+        boton.textContent = "Modo claro";
+    } else {
+        boton.textContent = "Modo oscuro";
+    }
+}
 
 
 

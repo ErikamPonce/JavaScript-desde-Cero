@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial, helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.reproductor {
+  width: 900px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgb(0, 0, 0.8);
+}
+
+.video {
+  width: 100%;
+  display: block;
+  background-color: black;
+}
+
+.controles {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#progreso {
+  border-radius: 10px;
+  background: linear-gradient(
+    to right,
+    #e50914 0%,
+    #e50914 var(--progreso),
+    #444 var(--progreso),
+    #444 100%
+  );
+}
+
+#progreso::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #e50914;
+  cursor: pointer;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.izquierda {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.derecha {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 22px;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+#tiempo {
+  color: white;
+}
+
+#volumen {
+  width: 100px;
+  cursor: pointer;
+}

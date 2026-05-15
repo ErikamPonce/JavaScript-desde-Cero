@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Video -->
+    <section>
+        <video id="video" width="600">
+            <source src="WhatsApp Video 2026-05-12 at 6.51.44 PM.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
+    </section>
+
+    <!-- Controles -->
+    <section>
+        <input type="range" id="progreso" value="0" max="100">
+
+        <section class="botones">
+
+            <div class="izquierda">
+                <button onclick="reproducir()">Play</button>
+                <button onclick="pausar()">Pause</button>
+                <button onclick="detener()">Stop</button>
+
+                <span id="tiempo">00:00</span>
+            </div>
+
+            <div class="derecha">
+                <input type="range" id="volumen" value="100" max="100">
+
+                <button onclick="pantallaCompleta()">⛶</button>
+            </div>
+
+        </section>
+    </section>
+
+
+</body>
+</html>
