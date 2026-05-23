@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificador de Viajes</title>
+</head>
+<body>
+
+    <h1>Planificador de Viajes</h1>
+
+    <!-- Formulario -->
+    <select id="destino" placeholder="Destino">
+        <option value="Paris">Paris</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Mexico">México</option>
+        <option value="Madrid">Madrid</option>
+    </select>
+
+    <input type="date" id="fecha">
+
+    <select id="transporte">
+        <option value="avion">Avión</option>
+        <option value="autobus">Autobús</option>
+        <option value="tren">Tren</option>
+    </select>
+
+    <button id="agregarBtn">Registrar Viaje</button>
+
+    <h2>Itinerario</h2>
+
+    <div id="listaViajes"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

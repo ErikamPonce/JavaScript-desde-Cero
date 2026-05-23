@@ -1,34 +1,94 @@
-//Funciones flecha
-function suma (a,b){
-    return a+b;
-}
+// Elementos del DOM
+const destinoInput = document.getElementById("destino");
+const fechaInput = document.getElementById("fecha");
+const transporteInput = document.getElementById("transporte");
+const boton = document.getElementById("agregarBtn");
+const listaViajes = document.getElementById("listaViajes");
 
-const sumar = (x,y) => x + y;
-console.log(sumar(8,2));
+// Arreglo de viajes
+const viajes = [];
 
-//un solo parametro
-const cuadrado = numero => numero * numero;
-console.log(cuadrado(5));
+// Costos por destino
+const costosDestino = {
+    Paris: 1200,
+    Tokyo: 1800,
+    Mexico: 800,
+    Madrid: 1000
+};
 
-//sin parametros
-const mensaje = () => 'Hola, soy una función flecha sin parámetros';
-console.log(mensaje());
+// Costos por transporte
+const costosTransporte = {
+    avion: 500,
+    autobus: 200,
+    tren: 300
+};
 
- const numeros = [1, 2, 3, 4, 5];
- const dobles = numeros.map(n => n * 2);
- console.log(dobles);
+// Calcular costo
+const calcularCosto = (destino, transporte) => {
 
- //template literals
- const word1 = 'Hola';
- const word2 = 'Mundo';
- //${variable} para insertar variables dentro de una cadena de texto
-console.log(`${word1} ${word2}!`); 
+    const costoDestino = costosDestino[destino] || 500;
+    const costoTransporte = costosTransporte[transporte] || 0;
 
-const ID = Symbol('id')
-const clave = 'id'
+    return costoDestino + costoTransporte;
+};
 
-const user = {
-  nombre: 'Antonio',
-  [id]: 123
-}
-console.log(user[ID]);
+// Registrar viaje
+const registrarDestino = () => {
+
+    const destino = destinoInput.value;
+    const fecha = fechaInput.value;
+    const transporte = transporteInput.value;
+
+    // Validación
+    if (destino === "" || fecha === "") {
+        alert("Completa todos los campos");
+        return;
+    }
+
+    // Calcular costo
+    const costo = calcularCosto(destino, transporte);
+
+    // Crear objeto viaje
+    const viaje = {
+        destino,
+        fecha,
+        transporte,
+        costo
+    };
+
+    // Guardar en arreglo
+    viajes.push(viaje);
+
+    // Mostrar itinerario
+    mostrarItinerario();
+
+    // Limpiar campos
+    destinoInput.value = "";
+    fechaInput.value = "";
+};
+
+// Mostrar viajes
+const mostrarItinerario = () => {
+
+    listaViajes.innerHTML = "";
+
+    viajes.forEach((viaje, index) => {
+
+        const contenedor = document.createElement("div");
+
+        contenedor.innerHTML = `
+            <hr>
+            <p><strong>Viaje #${index + 1}</strong></p>
+            <p>Destino: ${viaje.destino}</p>
+            <p>Fecha: ${viaje.fecha}</p>
+            <p>Transporte: ${viaje.transporte}</p>
+            <p>Costo estimado: $${viaje.costo}</p>
+        `;
+
+        listaViajes.appendChild(contenedor);
+
+    });
+};
+
+// Evento botón
+boton.addEventListener("click", registrarDestino);
