@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formulario {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#agregarBtn {
+  background: #007bff;
+  color: white;
+}
+
+#agregarBtn:hover {
+  background: #0056b3;
+}
+
+.mensaje {
+  margin-top: 10px;
+  font-size: 14px;
+  height: 18px;
+}
+
+.comentario {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.comentario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fecha {
+  font-size: 12px;
+  color: #777;
+}
+
+.eliminarBtn {
+  background: #ff4d4d;
+  color: white;
+  padding: 6px 10px;
+}
+
+.eliminarBtn:hover {
+  background: #cc0000;
+}
+
+.comentario p {
+  line-height: 1.5;
+}

@@ -42,7 +42,6 @@
             eliminarBtn.addEventListener("click", function () {
                 nuevoComentario.remove();
             });
-
         });
 
 
