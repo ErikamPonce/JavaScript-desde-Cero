@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Eventos</title>
+    <style >
+        body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+}
+
+h1{
+    text-align:center;
+}
+
+form{
+
+    width:50%;
+    margin:auto;
+    padding:20px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    background:white;
+
+}
+
+label{
+
+    display:block;
+    margin-top:10px;
+
+}
+
+input,
+button{
+
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+
+    width:auto;
+
+}
+
+button{
+
+    background:#4CAF50;
+    color:white;
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    background:#388E3C;
+
+}
+    </style>
+</head>
+<body>
+
+<h1>Registro de Eventos</h1>
+
+<form id="registroEvento">
+
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" required>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" required>
+
+    <label>Intereses:</label>
+
+    <label>
+        <input type="checkbox" name="intereses" value="Tecnología">
+        Tecnología
+    </label>
+
+    <label>
+        <input type="checkbox" name="intereses" value="Negocios">
+        Negocios
+    </label>
+
+    <label>
+        <input type="checkbox" name="intereses" value="Arte">
+        Arte
+    </label>
+
+    <label>Horario preferido:</label>
+
+    <label>
+        <input type="radio" name="horario" value="Mañana">
+        Mañana
+    </label>
+
+    <label>
+        <input type="radio" name="horario" value="Tarde">
+        Tarde
+    </label>
+
+    <label>
+        <input type="radio" name="horario" value="Noche">
+        Noche
+    </label>
+
+    <label for="fecha">Fecha del evento:</label>
+    <input type="date" id="fecha" required>
+
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora" required>
+
+    <label for="archivo">
+        Documento de identificación (opcional):
+    </label>
+
+    <input type="file" id="archivo">
+
+    <button type="submit">
+        Registrarse
+    </button>
+
+</form>
+
+<script src="app.js"></script>
+
+</body>
+</html>
