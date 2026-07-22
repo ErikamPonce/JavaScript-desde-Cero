@@ -1,0 +1,10 @@
+{
+  "name": "mi-exploracion-espacial",
+  "version": "1.0.0",
+  "scripts": {
+    "explorar": "node index.js"
+  },
+  "dependencies": {
+    "cowsay": "^1.6.0"
+  }
+}
